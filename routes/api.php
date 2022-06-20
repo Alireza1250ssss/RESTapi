@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RelationController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\TestMiddleware;
 use Illuminate\Http\Request;
@@ -40,3 +41,5 @@ Route::put('user/{user}/restore',[UserController::class,"restore"])->name('user.
 
 
 // -----> /user
+
+Route::apiResource('country',RelationController::class);
